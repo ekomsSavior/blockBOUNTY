@@ -1,0 +1,6 @@
+{
+  "ethereum": "YOUR_ETHERSCAN_API_KEY_HERE",
+  "bsc": "YOUR_BSCSCAN_API_KEY_HERE",
+  "polygon": "YOUR_POLYGONSCAN_API_KEY_HERE",
+  "arbiscan": "YOUR_ARBISCAN_API_KEY_HERE"
+}

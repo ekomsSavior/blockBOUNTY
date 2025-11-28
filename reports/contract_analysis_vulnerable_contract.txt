@@ -1,0 +1,84 @@
+======================================================================
+BLOCKBOUNTY SMART CONTRACT SECURITY ANALYSIS REPORT
+======================================================================
+
+Contract: vulnerable_contract.sol
+Total Vulnerabilities Found: 7
+Total Structure Issues: 1
+
+Severity Breakdown:
+  CRITICAL: 2
+  HIGH: 4
+  MEDIUM: 1
+
+======================================================================
+DETAILED VULNERABILITY REPORT
+======================================================================
+
+[1] Reentrancy Vulnerability
+Severity: CRITICAL
+Line: 21
+Code: msg.sender.call.value(_amount)("");
+Description: Potential reentrancy vulnerability detected. External call before state change.
+Recommendation: Use Checks-Effects-Interactions pattern. Update state before external calls.
+----------------------------------------------------------------------
+
+[2] tx.origin Authentication
+Severity: HIGH
+Line: 27
+Code: require(tx.origin == owner);
+Description: Using tx.origin for authentication is insecure.
+Recommendation: Use msg.sender instead of tx.origin for authentication.
+----------------------------------------------------------------------
+
+[3] Unprotected Self-Destruct
+Severity: CRITICAL
+Line: 33
+Code: selfdestruct(owner);
+Description: Self-destruct function may be unprotected.
+Recommendation: Ensure selfdestruct is properly protected with access controls.
+----------------------------------------------------------------------
+
+[4] Outdated Compiler Version
+Severity: MEDIUM
+Line: 2
+Code: pragma solidity ^0.4.24;
+Description: Using outdated Solidity compiler version.
+Recommendation: Update to Solidity 0.8.0 or higher for built-in overflow protection.
+----------------------------------------------------------------------
+
+[5] Unprotected Ether Withdrawal
+Severity: HIGH
+Line: 19
+Code: function withdraw(uint256 _amount) public {
+Description: Withdrawal function may be unprotected.
+Recommendation: Add access controls and withdrawal limits to withdrawal functions.
+----------------------------------------------------------------------
+
+[6] Integer Overflow/Underflow
+Severity: HIGH
+Line: 22
+Code: balances[msg.sender] -= _amount;
+Description: Arithmetic operations without SafeMath (pre-0.8.0).
+Recommendation: Use SafeMath library or upgrade to Solidity 0.8.0+.
+----------------------------------------------------------------------
+
+[7] Integer Overflow/Underflow
+Severity: HIGH
+Line: 38
+Code: balances[msg.sender] += msg.value;
+Description: Arithmetic operations without SafeMath (pre-0.8.0).
+Recommendation: Use SafeMath library or upgrade to Solidity 0.8.0+.
+----------------------------------------------------------------------
+
+======================================================================
+CONTRACT STRUCTURE ISSUES
+======================================================================
+
+[1] Floating Pragma
+Severity: LOW
+Description: Contract uses floating pragma. Lock to specific version for production.
+
+======================================================================
+END OF REPORT
+======================================================================
