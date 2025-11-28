@@ -1,5 +1,8 @@
 # blockBOUNTY
 
+![Screenshot_2025-11-28_16_22_40](https://github.com/user-attachments/assets/fca21e64-d89f-4b7e-a882-968551db3ab9)
+
+
 Blockchain bug bounty and vulnerability scanner for smart contracts, DeFi and wallet activity.
 
 BlockBOUNTY is a CLI framework for security engineers who live in web / infra / app land but need a foothold in web3.
@@ -108,18 +111,12 @@ python3 blockbounty.py
 
 You’ll be dropped into the interactive menu:
 
-```text
-INTERACTIVE MODE – BLOCKCHAIN BUG BOUNTY
+![Screenshot_2025-11-28_16_23_27](https://github.com/user-attachments/assets/8c507891-9d02-4f22-8bb7-460571062fb1)
 
-What would you like to analyze?
 
-[1] Smart Contract Vulnerability Scan
-[2] Wallet Address Inspector
-[3] Transaction Pattern Analysis
-[4] Exit
-```
 
 ### 1. Smart Contract Vulnerability Scan
+
 
 **Option A – Local Solidity file**
 
@@ -155,6 +152,9 @@ Use this during on-chain bounties when you want a first-pass read of deployed co
 ---
 
 ### 2. Wallet Address Inspector
+
+![Screenshot_2025-11-28_16_23_38](https://github.com/user-attachments/assets/e35b1865-dbb0-4ad9-bf6a-46025d07d2c9)
+
 
 1. Choose `2` from the main menu.
 2. Paste the wallet address you want to inspect.
@@ -238,3 +238,6 @@ BlockBOUNTY is provided for educational use, internal security testing and autho
 * There is no warranty of accuracy or fitness for any particular purpose. You are responsible for how you use the results and for any impact on external systems.
 
 Use this framework as a starting point for understanding blockchain targets, not as the final word on their security posture.
+
+![Screenshot 2025-10-14 111008](https://github.com/user-attachments/assets/4993cfcf-62b9-4c2b-b564-f7bdb6b71ef7)
+
