@@ -94,7 +94,7 @@ pip3 install web3 --break-system-packages
 
 Deep wallet / transaction analysis uses blockchain explorer APIs (Etherscan-style).
 
-* Create API keys for the chains you care about (Ethereum mainnet, testnets, BSC, Polygon, etc.) on the relevant explorers.
+* Create API keys (https://etherscan.io for eth) for the chains you care about (Ethereum mainnet, testnets, BSC, Polygon, etc.) on the relevant explorers.
 * Drop those keys into the files under the `config/api_keys.json` directory.
   The layout in that directory is intentionally simple and documented in comments; adjust it to match your setup.
 * Without keys, BlockBOUNTY can still run local contract analysis on `.sol` files, but wallet and transaction modules will be limited.
