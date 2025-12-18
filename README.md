@@ -3,7 +3,7 @@
 ![Screenshot_2025-11-28_16_22_40](https://github.com/user-attachments/assets/fca21e64-d89f-4b7e-a882-968551db3ab9)
 
 
-Blockchain bug bounty and vulnerability scanner for smart contracts, DeFi and wallet activity.
+Blockchain bug bounty and vulnerability scanner for smart contracts, DeFi and wallet activity
 
 BlockBOUNTY is a CLI framework for security engineers who live in web / infra / app land but need a foothold in web3.
 It gives you a first-pass view of:
